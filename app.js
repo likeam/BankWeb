@@ -34,16 +34,32 @@ document.addEventListener('keydown', function (e) {
 // console.log(document.documentElement);
 
 // document.querySelector('.header');
-const allSections = document.querySelectorAll('.section');
+// const allSections = document.querySelectorAll('.section');
 // console.log(allSections);
-const header = document.querySelector('.header');
-const massage = document.createElement('div');
-massage.classList.add('cookie-message');
-massage.innerHTML = 'We use cookeed for imprived fuctinnality and analyticis, <button class = "btn btn--close-cookie">Got it!</button>';
-header.append(massage);
-console.log(massage);
+// const header = document.querySelector('.header');
+// const massage = document.createElement('div');
+// massage.classList.add('cookie-message');
+// massage.innerHTML = 'We use cookeed for imprived fuctinnality and analyticis, <button class = "btn btn--close-cookie">Got it!</button>';
+// header.append(massage);
+// console.log(massage);
 // delete massage
 
-document.querySelector('.btn--close-cookie').addEventListener('click', function(){
-  massage.remove();
+// document.querySelector('.btn--close-cookie').addEventListener('click', function(){
+  // massage.remove();
+// });
+// 
+
+
+const btnScrollTo = document.querySelector('.btn--scroll-to');
+const section1 = document.querySelector('#section--1');
+
+btnScrollTo.addEventListener('click', function(e) {
+  const s1coords = section1.getBoundingClientRect();
+
+  // window.scrollTo({left: s1coords.left + window.pageXOffset,
+    // top: s1coords.top + window.pageYOffset,
+  // behavior: 'smooth',
+// });
+
+section1.scrollIntoView({behavior : 'smooth'});
 });
