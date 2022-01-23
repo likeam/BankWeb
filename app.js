@@ -113,3 +113,50 @@ tabsContainer.addEventListener('click', function (e) {
     .querySelector(`.operations__content--${clicked.dataset.tab}`)
     .classList.add('operations__content--active');
 });
+
+
+
+///////////////////
+
+class Person{
+  
+  
+  constructor(firstName, bithYear){
+    this.firstName = firstName;
+    this.bithYear = bithYear;
+  }
+  calcAge(){
+    console.log(2037-this.bithYear);
+  }
+  greet(){
+    console.log(`Hey ${this.firstName}`);
+  }
+  get age(){
+    return 2037-this.bithYear;
+  }
+
+  
+
+}
+const rehman = new Person('Rehman', 1980);
+console.log(rehman);
+rehman.calcAge();
+rehman.greet();
+console.log(rehman.age);
+
+const account = {
+  owner : 'Abdul Rehman',
+  movement : [ 200, 300, 400, 500],
+
+  get latest(){
+    return this.movement.slice(-1).pop();
+  },
+
+  set latest(move){
+    this.movement.push(move);
+  },
+};
+
+console.log(account.latest);
+account.latest = 600;
+console.log(account.movement);
